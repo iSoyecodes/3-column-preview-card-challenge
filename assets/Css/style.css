@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* Primary theme */
+    --right-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral theme */
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+body {
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--Transparent-white-paragraphs);
+    font-size: 1.5rem;
+}
+
+/* Card */
+.card {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.card__container {
+    width: 100%;
+    max-width: 92rem;
+    height: auto;
+    padding: 8.8rem 2.4rem ;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.card__wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 4.8rem 4.9rem;  
+}
+
+.card__inner {
+    width: 100%;
+    max-width: 22.8rem;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2.8rem;
+    
+}
+
+.card__header {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3.7rem;
+}
+
+.btn {
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    border: 2px solid hsl(0, 0%, 95%);
+    padding: 1.6rem 3rem 1.7rem;
+    font-family: 'Lexend Deca', sans-serif;
+    border-radius: 3rem;
+}
+
+.btn:hover, :focus {
+    background: transparent;
+    color: var(--Very-light-gray-background-headings-buttons);
+}
+
+/* X Card */
+
+/* Typography */
+.card__title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--Very-light-gray-background-headings-buttons);
+    margin-top: 1rem;
+}
+
+.card__info {
+    font-size: 1.5rem;
+    line-height: 167.5%;
+}
+
+/* X Typography */
+
+/* Card-background Theme */
+.bg--orange {
+    background: var(--right-orange);
+    border-top-left-radius: 0.9rem;
+    border-top-right-radius: 0.9rem;
+}
+
+.btn--orange {
+    color: var(--right-orange);
+}
+
+.bg--dark-cyan {
+    background: var(--Dark-cyan);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.btn--dark-cyan {
+    color: var(--Dark-cyan);
+}
+
+.bg--very-dark-cyan {
+    background: var(--Very-dark-cyan);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
+}
+
+.btn--very-dark-cyan {
+    color: var(--Very-dark-cyan);
+}
+
+/* X Card-background Theme */
+
+/* media querry min-width 744px */
+@media screen and (min-width: 744px) {
+    .card__container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .bg--orange {
+        border-top-left-radius: 0.9rem;
+        border-top-right-radius: 0;
+    }
+
+    .bg--dark-cyan {
+        border-top-right-radius: 0.9rem;
+    }
+
+    .bg--very-dark-cyan {
+        grid-column: span 2;
+        border-bottom-left-radius: 0.9rem;
+        border-bottom-right-radius: 0.9rem;
+    }
+}
+/* X media querry min-width 744px */
+
+/* media querry min-width 1024px */
+@media screen and (min-width: 1024px) {
+    .card__container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card__container {
+        width: 100%;
+        padding: 8.8rem 1rem;   
+    }
+
+    .card__footer {
+        margin-top: 5.4rem;
+    }
+    
+    .bg--orange {
+        border-bottom-left-radius: 0.9rem;
+    }
+
+    .bg--dark-cyan {
+        border-top-right-radius: 0;
+    }
+
+    .bg--very-dark-cyan {
+        grid-column: 3;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0.9rem;
+        border-top-right-radius: 0.9rem;
+    }
+}
+
+/* X media querry min-width 1024px */
+
+/* footer */
+.attribution { 
+    font-size: 11px; text-align: center;
+    color: var(--Very-dark-cyan);
+    
+}
+
+.attribution a {
+    color: var(--right-orange); 
+}
